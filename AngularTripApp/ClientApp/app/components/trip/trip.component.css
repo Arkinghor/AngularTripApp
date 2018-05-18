@@ -1,0 +1,148 @@
+﻿div.tripsOffert {
+    width: 100%;
+    margin-bottom:50px;
+    box-shadow: 0 -7px 10px -8px gray;
+}
+
+
+.offertImage {
+    max-width: 40%;
+    min-width: 400px;
+    margin-top: 60px;
+    padding: 0px;
+    box-shadow: 0 13px 10px -8px gray;
+}
+
+.offertImage > img {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+
+.offertAssets {
+    font-size: 20px;
+    min-width:250px;
+    min-height:200px;
+    padding-left: 10px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.terminInfo  {
+    float: right;
+}
+
+.terminInfo > div > * {
+    float: right;
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.OffertButtons {
+    float: right;
+}
+
+.stars {
+    margin-top: 1em;
+    float: right;
+    color: yellow;
+}
+
+
+.ribbon {
+    position: absolute;
+    width: initial;
+    float:left;
+}
+
+    .ribbon > * {
+        background-color: #ff6a00;
+        /*#BA9B7A;*/
+    }
+
+.ribbon > div:first-child {
+    min-width: 382px;
+    /*float:left;*/
+    border-radius: 2px;
+    border-style: solid;
+    line-height: 0.1;
+    border-width: 1px;
+    box-shadow: 0 7px 10px -8px gray;
+}
+
+.ribbon > div:first-child ::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    font-size: 50%;
+    bottom: -1em;
+    z-index: -1;
+    border-style: solid;
+    border-width: 1em 1em 0em 0em;
+    border-color: #393939 transparent transparent transparent;
+}
+
+.ribbon > div:nth-child(2) {
+    margin-top: 1em;
+    margin-left: -1.2em;
+    min-width: 180px;
+    float: right;
+    border-radius: 2px;
+    border-left: none;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 7px 10px -8px gray;
+    z-index: -2;
+}
+
+@media (max-width: 1130px) {
+
+    div.tripsOffert {
+        min-height:400px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+.ribbon > * {
+    background-color: #ff6a00;
+    width: auto;
+    min-width: 324px;
+    display: table;
+}
+
+.ribbon > div:first-child {
+    min-width: 324px;
+}
+
+.ribbon > div:nth-child(2) {
+    min-width: 169px;
+    position: absolute;
+    margin-top: -3.6em;
+    margin-left: 22em;
+}
+
+    .offertAssetsColumn
+    {
+        float:none;
+    }
+
+    .offertAssets {
+        margin-top: 80px;
+        min-width: 300px;
+    }
+
+    .terminInfo {
+        margin-top: 6em;
+    }
+
+    .OffertButtons {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+
+
+}

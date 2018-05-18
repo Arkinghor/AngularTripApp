@@ -1,0 +1,152 @@
+<p>AddTrips</p>
+<div class="formBox">
+    <form class="form-horizontal" [formGroup]="signupForm" ngSubmit="onClickSubmit(signupForm.value)">
+        <div class="col-sm-4 formLeft">
+            <div class="form-group">
+                <div class="col-md-11">
+                    <div class="input-group">
+                        <span class="input-group-addon">HotelName</span>
+                        <input id="HotelName" name="HotelName" class="form-control" placeholder="HotelName" type="text" formControlName="HotelName" required>
+                    </div>
+
+                    <div *ngIf="signupForm.controls.HotelName.invalid && (signupForm.controls.HotelName.dirty || signupForm.controls.HotelName.touched)"
+                         class="alert alert-danger">
+
+                        <small *ngIf="signupForm.controls.HotelName.errors.required">
+                            HotelName is required.
+                        </small>
+                        <small *ngIf="signupForm.controls.HotelName.errors.minlength">
+                            HotelName must be at least 4 characters long.
+                        </small>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-11">
+                    <div class="input-group">
+                        <span class="input-group-addon">Country</span>
+                        <input id="Country" name="Country" class="form-control" placeholder="Country" type="text" formControlName="Country" required>
+                    </div>
+                </div>
+
+                <div *ngIf="signupForm.controls.Country.invalid && (signupForm.controls.Country.dirty || signupForm.controls.Country.touched)"
+                     class="alert alert-danger">
+
+                    <small *ngIf="signupForm.controls.Country.errors.required">
+                        Country is required.
+                    </small>
+                    <small *ngIf="signupForm.controls.Country.errors.minlength">
+                        Country must be at least 3 characters long.
+                    </small>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-11">
+                    <div class="input-group">
+                        <span class="input-group-addon">Region</span>
+                        <input id="Region" name="Region" class="form-control" placeholder="Region" type="text" formControlName="Region" required>
+                    </div>
+                </div>
+
+                <div *ngIf="signupForm.controls.Region.invalid && (signupForm.controls.Region.dirty || signupForm.controls.Region.touched)"
+                     class="alert alert-danger">
+
+                    <small *ngIf="signupForm.controls.Region.errors.required">
+                        Region is required.
+                    </small>
+                    <small *ngIf="signupForm.controls.Region.errors.minlength">
+                        Region must be at least 4 characters long.
+                    </small>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-11">
+                    <div class="input-group">
+                        <span class="input-group-addon">Price</span>
+                        <input id="Price" name="Price" class="form-control" placeholder="Price" type="text" formControlName="Price" required>
+                    </div>
+                </div>
+
+                <div *ngIf="signupForm.controls.Price.invalid && (signupForm.controls.Price.dirty || signupForm.controls.Price.touched)"
+                     class="alert alert-danger">
+
+                    <small *ngIf="signupForm.controls.Price.errors.required">
+                        Price is required.
+                    </small>
+                    <small *ngIf="signupForm.controls.Price.errors.minlength">
+                        Price must be at least 4 characters long.
+                    </small>
+                </div>
+
+            </div>
+            <div class="form-group">
+                <div class="col-md-11">
+                    <div class="input-group">
+                        <span class="input-group-addon">HowLong</span>
+                        <input id="HowLong" name="HowLong" class="form-control" placeholder="HowLong" type="text" formControlName="HowLong" required>
+                    </div>
+                </div>
+
+                <div *ngIf="signupForm.controls.HowLong.invalid && (signupForm.controls.HowLong.dirty || signupForm.controls.HowLong.touched)"
+                     class="alert alert-danger">
+
+                    <small *ngIf="signupForm.controls.HowLong.errors.required">
+                        HowLong is required.
+                    </small>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-11">
+                    <div class="input-group">
+                        <span class="input-group-addon">TripDate</span>
+                        <input id="TripDate" name="TripDate" class="form-control" placeholder="TripDate" type="datetime-local" formControlName="TripDate">
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" formArrayName="Assets">
+                <div class="col-md-11">
+                    <div *ngFor="let Assets of signupForm['controls'].Assets['controls']; let i=index">
+                        <div>
+                            <span *ngIf="signupForm.controls.Assets.controls.length > 1" (click)="removeAssets(i)">
+                            </span>
+                        </div>
+
+                        <div class="form-group" [formGroupName]="i">
+                            <div class="col-md-11">
+                                <div class="input-group">
+                                    <span class="input-group-addon">Asset {{i}}</span>
+                                    <input id="Asset" name="Asset" class="form-control" placeholder="Asset" type="text" formControlName="Asset">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-11">
+                    <span type="button" class="btn btn-link" (click)="addAssets()">AddAssets</span>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-sm-6 formLeft">
+
+            <div class="polaroid-images">
+                <div>
+                    <img [src]="url" />
+                    <label for="file-upload">Click too Upload</label>
+                </div>
+            </div>
+            <input id="file-upload" class="inputfile" type="file" #fileInput placeholder="Upload Image..." change="onFileSelected($event)" />
+        </div>
+
+        <div class="form-group">
+            <div class="col-xs-offset-2 col-xs-10">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="formBox"></div>
+<trip></trip>

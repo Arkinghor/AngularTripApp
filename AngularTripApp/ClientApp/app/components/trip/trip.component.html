@@ -1,0 +1,148 @@
+<h1>Hello, trip!</h1>
+
+
+<!--<div role="presentation" *ngFor="let trip of trips">
+    <div width="100" style="background-color:orange">
+        <span>{{trip.country}}/{{trip.region}}</span>
+        <ul>
+            <li role="presentation" *ngFor="let asset of assets">
+                <span>{{trip.asset}}</span>
+        </ul>
+    </div>
+</div>-->
+<!--https://content4travel.com/cms/img/u/desktop/semain/CFUKAMA.jpg-->
+<div class="tripsOffert" role="presentation" *ngFor="let trip of trips">
+    <div style="min-height:300px; width:initial">
+        <div class="offertImage col-md-6">       
+            <img class="img-fluid" src="{{trip.imagePath}}" alt="Hotel {{trip.hotelName}}">
+        </div>
+
+        <div class="ribbon col-md-6">
+            <div class="col-md-6">
+                <span class="stars">
+                    <span class='glyphicon glyphicon-star'></span>
+                    <span class='glyphicon glyphicon-star'></span>
+                    <span class='glyphicon glyphicon-star'></span>
+                    <span class='glyphicon glyphicon-star'></span>
+                    <span class='glyphicon glyphicon-star'></span>
+                </span>
+
+                <h2>{{trip.hotelName}}</h2>
+
+            </div>
+            <div class="col-md-3">
+                <h2>{{trip.price}}</h2>
+            </div>
+        </div>
+
+        <div class="terminInfo col-md-2">
+            <div>
+                <div>{{trip.country}}/{{trip.region}}</div>
+                <div>{{trip.date}}</div>
+                <div>{{trip.howLong}} days</div>
+            </div>
+        </div>
+
+        <div class="offertAssetsColumn col-md-6">
+            <div class="offertAssets">
+                <ul>
+                    <li role="presentation" *ngFor="let asset of trip.assets">
+                        {{asset}}
+                    </li>
+                </ul>
+            </div>
+            <div class="OffertButtons">
+                <div> Get more <button class="btn btn-primary">Details</button> Or <button class="btn btn-primary">Book Now</button></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--<div role="presentation" style="width:auto"  *ngFor="let trip of trips">
+    <article>
+        <div class="offer_column offer_column-first col-sm-5 col-lg-4" style="background-color:blue">
+            <figure class="offer_figure">
+                <div class="figure_main-photo-wrapper hidden-xs">
+                    <div class="LazyLoad is-visible">
+                        <img src="https://content4travel.com/cms/img/u/desktop/semain/CFUKAMA.jpg" class="figure_main-photo" alt="Hotel Kamari Studios &amp; Apartments">
+                    </div>
+                </div>
+            </figure>
+        </div>
+        <div class="offer_column offer_column-second col-sm-7 col-lg-8 clearfix" style="background-color:red">
+            <div class="offer_object-info col-xs-12 col-sm-9">
+                <h2>{{trip.hotelName}}</h2>
+            </div>
+        </div>
+        <div class="offer_offer-info col-xs-12 col-sm-3 clearfix">
+            Cena i inne pierdy
+        </div>
+    </article>
+</div>-->
+<!--<div>
+<article data-index="0" data-code="CFUKAMA" class="offer clearfix">
+    <div class="offer_column offer_column-first col-sm-5 col-lg-4">
+        <figure class="offer_figure">
+            <div class="figure_main-photo-wrapper hidden-xs">
+                <div class="LazyLoad is-visible">
+                <img src="https://content4travel.com/cms/img/u/desktop/semain/CFUKAMA.jpg" class="figure_main-photo" alt="Hotel Kamari Studios &amp; Apartments">
+                </div>
+            </div>
+            <div class="figure_gallery hidden-xs" data-gallery="https://content4travel.com/cms/img/u//desktop/se/cfukama_0.jpg?version=30,https://content4travel.com/cms/img/u//desktop/se/cfukama_1.jpg?version=30,https://content4travel.com/cms/img/u//desktop/se/cfukama_2.jpg?version=30,https://content4travel.com/cms/img/u//desktop/se/cfukama_3.jpg?version=30,https://content4travel.com/cms/img/u//desktop/se/cfukama_4.jpg?version=30,https://content4travel.com/cms/img/u//desktop/se/cfukama_5.jpg?version=30,https://content4travel.com/cms/img/u//desktop/se/cfukama_6.jpg?version=30">
+            <div class="visible-lg">
+                <div class="gallery_more-photos" title="Wiêcej zdjêæ">
+                    <div class="more-photos-table">
+                        <div class="more-photos-cell">Zobacz zdjêcia</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="figure_swipe-gallery-wrapper visible-xs">
+                <div class="figure_swipe-gallery">
+                    <div class="LazyLoad"></div>
+                </div>
+           </div>
+            <span class="hotel-rank-container">
+                <span class="hotel-rank">4,6</span>
+                <span class="hotel-rank-max"> / 6</span>
+            </span>
+         </figure>
+
+        <div class="remember_offer visible-xs">
+                <span class="remember_offer_label">Ulubione</span>
+        </div>
+    </div>
+
+    <div class="offer_column offer_column-second col-sm-7 col-lg-8 clearfix">
+        <div class="offer_object-info col-xs-12 col-sm-9">
+        <header class="offer_header">
+            <a target="_blank" href="/wczasy/grecja/korfu/hotel-kamari-studios-apartments,CFUKAMA.html?ofr_id=bdd0c71fdf97dd42f4b1069dd4a3c62737d5b67fdfb6998f81845b6bdb0aa5b4&amp;adults=2&amp;childs=0&amp;currency=PLN" title="SprawdŸ cenê - Hotel Kamari Studios &amp; Apartments">
+                <h2 class="header_title">Hotel Kamari Studios &amp; Apartments</h2>
+                </a>
+            <span class="header_stars header_stars-30"></span>
+            <div class="header_geo-labels">
+                <a href="https://www.itaka.pl/wyniki-wyszukiwania/wczasy/grecja/maj/">Grecja</a>
+                / <a href="https://www.itaka.pl/wyniki-wyszukiwania/wczasy/korfu/maj/">Korfu</a>
+                / Acharavi
+            </div>
+        </header>
+
+        <ul class="offer_assets hidden-xs">
+            <li>rodzinny wypoczynek</li>
+            <li>po³o¿ony przy pla¿y</li>
+            <li>niedaleko centrum miasteczka</li>
+            <li>przyjazna obs³uga</li>
+       </ul> react-empty: 37
+
+
+        <div class="offer_attributes hidden-xs"><div class="offer_attribute lastMinute" title="Last Minute"><span class="attribute_icon-container"><span class="attribute_icon"></span></span><span class="attribute_label">Last Minute</span></div></div></div><div class="offer_offer-info col-xs-12 col-sm-3 clearfix"><div class="offer_date hidden-xs pull-right">So 05.05.2018 (8 dni)</div><div class="offer_price pull-right"><span class="old-price"><span class="old-price_value">1 999</span><span class="old-price_currency">PLN</span><span class="old-price_percentage">59</span></span><span class="current-price single-price" title="Cena za osobê"><span class="current-price_value">809</span><span class="current-price_currency">PLN</span></span></div><a class="offer_link pull-right" target="_blank" href="/wczasy/grecja/korfu/hotel-kamari-studios-apartments,CFUKAMA.html?ofr_id=bdd0c71fdf97dd42f4b1069dd4a3c62737d5b67fdfb6998f81845b6bdb0aa5b4&amp;adults=2&amp;childs=0&amp;currency=PLN" title="PrzejdŸ do strony oferty"><span class="link_text">Szczegó³y</span></a><div class="remember_offer hidden-xs"><span class="remember_offer_label">Ulubione</span></div></div></div><a target="_blank" href="/wczasy/grecja/korfu/hotel-kamari-studios-apartments,CFUKAMA.html?ofr_id=bdd0c71fdf97dd42f4b1069dd4a3c62737d5b67fdfb6998f81845b6bdb0aa5b4&amp;adults=2&amp;childs=0&amp;currency=PLN" class="offer_mobile-link"></a></article></div>-->
+<!--<ul style="list-style-type: none;">
+    <li role="presentation" *ngFor="let trip of trips">
+        <div width="100" style="background-color:orange">
+            <span>{{trip.country}}/{{trip.region}}</span>
+            <li role="presentation" *ngFor="let asset of Assets">
+                <ul>{{trip.asset}}</ul>
+        </div>
+    </li>
+</ul>-->

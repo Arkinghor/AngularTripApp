@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AngularTripApp", "AngularTripApp\AngularTripApp.csproj", "{01E8AE1E-6BBB-4BB7-AF25-4293CB47C9B0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess", "DataAccess\DataAccess.csproj", "{55E0DC0D-F51C-49BA-A79B-098E0F995C76}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryCommon", "RepositoryCommon\RepositoryCommon.csproj", "{3E755182-27BC-46C0-AF8C-99292FF8B2DD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01E8AE1E-6BBB-4BB7-AF25-4293CB47C9B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01E8AE1E-6BBB-4BB7-AF25-4293CB47C9B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01E8AE1E-6BBB-4BB7-AF25-4293CB47C9B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01E8AE1E-6BBB-4BB7-AF25-4293CB47C9B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55E0DC0D-F51C-49BA-A79B-098E0F995C76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55E0DC0D-F51C-49BA-A79B-098E0F995C76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55E0DC0D-F51C-49BA-A79B-098E0F995C76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55E0DC0D-F51C-49BA-A79B-098E0F995C76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E755182-27BC-46C0-AF8C-99292FF8B2DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E755182-27BC-46C0-AF8C-99292FF8B2DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E755182-27BC-46C0-AF8C-99292FF8B2DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E755182-27BC-46C0-AF8C-99292FF8B2DD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93163BD8-D05D-4C47-B33D-7C3DAB52D106}
+	EndGlobalSection
+EndGlobal
